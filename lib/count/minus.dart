@@ -7,6 +7,8 @@ class Minus extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("minus builded");
+
     CounterProvider counterProvider = Provider.of(context);
     return IconButton(
         icon: const Icon(Icons.remove), onPressed: counterProvider.sub);

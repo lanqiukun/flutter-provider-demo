@@ -6,8 +6,7 @@ class Passerby extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print("Passerby builded");
-    return Container(
-      child: const Text("我只是路过而已"),
-    );
+
+    return const Text("我只是路过而已");
   }
 }

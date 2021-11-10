@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_demo/counter_provider.dart';
 
-class Add extends StatelessWidget {
-  const Add({Key? key}) : super(key: key);
+class Value extends StatelessWidget {
+  const Value({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    CounterProvider counterProvider = Provider.of(context);
+    print("value builded");
 
-    return IconButton(
-        icon: const Icon(Icons.add), onPressed: counterProvider.add);
+    CounterProvider counterProvider = Provider.of(context);
+    var number = counterProvider.num;
+
+    return Text(number.toString());
   }
 }
