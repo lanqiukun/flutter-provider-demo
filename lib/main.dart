@@ -16,16 +16,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("provider demo"),
-        ),
-        body: MultiProvider(
-          providers: [
-            ChangeNotifierProvider(create: (context) => CounterProvider())
-          ],
-          child: Row(
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => CounterProvider())
+      ],
+      child: MaterialApp(
+        home: Scaffold(
+          appBar: AppBar(
+            title: const Text("provider demo"),
+          ),
+          body: Row(
             children: const [
               Add(),
               Value(),
